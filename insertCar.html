@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script>
+    setManufacturers();
+</script>
+<h1>Insert Car</h1>
+<form id="carForm" action="javascript:insert('https://webtechcars.herokuapp.com/api/cars', 'carForm')">
+    <table>
+        <tr>
+            <th>name</th>
+            <th>consumption</th>
+            <th>color</th>
+            <th>manufacturer</th>
+            <th>available</th>
+            <th>year</th>
+            <th>horsepower</th>
+        </tr>
+        <tr>
+            <td><input id="name" type="text" required="required" placeholder="Clio" /></td>
+            <td><input id="consumption" type="text" min="0" required="required" placeholder="8l/100km" /></td>
+            <td><input id="color" type="text" required="required" placeholder="Black" /></td>
+            <td>
+                <select id="manufacturer" required="required"></select>
+            </td>
+            <td><input id="avaiable" type="number" min="0" required="required" value="0" /></td>
+            <td><input id="year" type="number" min="1900" max="2099" step="1" value="2020" /></td>
+            <td><input id="horsepower" type="number" min="0" required="required" value="0" /></td>
+        </tr>
+        <tr>
+            <td colspan="7"><input type="submit" value="Insert Car" /></td>
+        </tr>
+    </table>
+</form>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script>
+    $.ajaxSetup({
+        async: false
+    });
+    load("https://webtechcars.herokuapp.com/api/manufacturers", "manufacturerTable");
+    appendCheckBoxes("manufacturerTable");
+    $.ajaxSetup({
+        async: true
+    });
+</script>
+<h1>Delete Manufacturer</h1>
+<table id="manufacturerTable">
+</table>
+<input type="submit" onclick="remove('https://webtechcars.herokuapp.com/api/manufacturers', 'manufacturerTable')" value="Delete Manufacturer" />
+
+</html>
